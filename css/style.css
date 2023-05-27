@@ -1,0 +1,801 @@
+/*********************************************************************************/
+/* General                                                                         */
+/*********************************************************************************/
+@import url("font-awesome.min.css");
+@font-face
+{
+    font-family: 'Sportscenter';
+    src: url('fonts/Sportscenter.eot');
+    src: local('☺'), url('fonts/Sportscenter.woff') format('woff'), url('fonts/Sportscenter.ttf') format('truetype'), url('fonts/Sportscenter.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+    background: #141414;
+}
+
+body,input,textarea,select
+{
+    font-family: 'Arimo', sans-serif;
+    font-size: 11pt;
+    line-height: 1.75em;
+    color: #4c4c4c;
+}
+input[type=text],input[type=password],button {
+    border-radius: 40px;
+    padding: 3px;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    text-transform: uppercase;
+    font-family: 'Sportscenter', sans-serif;
+    font-weight: bold;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+em, i
+{
+    font-style: italic;
+}
+
+a
+{
+    text-decoration: underline;
+    color: #272727;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+sub
+{
+    position: relative;
+    top: 0.5em;
+    font-size: 0.8em;
+}
+
+sup
+{
+    position: relative;
+    top: -0.5em;
+    font-size: 0.8em;
+}
+
+hr
+{
+    border: 0;
+    border-top: solid 1px #ddd;
+}
+
+blockquote
+{
+    border-left: solid 0.5em #ddd;
+    padding: 1em 0 1em 2em;
+    font-style: italic;
+}
+
+p, ul, ol, dl, table
+{
+    margin-bottom: 1em;
+}
+
+header
+{
+    margin-bottom: 1em;
+}
+
+header h2
+{
+}
+
+header .byline
+{
+    display: block;
+    margin: 0.5em 0 0 0;
+    padding: 0 0 0.5em 0;
+}
+
+footer
+{
+    margin-top: 1em;
+}
+
+br.clear
+{
+    clear: both;
+}
+
+/* Sections/Articles */
+
+section,
+article
+{
+    margin-bottom: 3em;
+}
+
+section > :last-child,
+article > :last-child
+{
+    margin-bottom: 0;
+}
+
+section:last-child,
+article:last-child
+{
+    margin-bottom: 0;
+}
+
+.row > section,
+.row > article
+{
+    margin-bottom: 0;
+}
+
+/* Images */
+
+.image
+{
+    display: inline-block;
+}
+
+.image img
+{
+    display: block;
+    width: 100%;
+}
+
+.image.featured
+{
+    display: block;
+    width: 100%;
+    margin: 0 0 2em 0;
+}
+
+.image.full
+{
+    display: block;
+    width: 100%;
+    margin: 0 0 2em 0;
+}
+
+.image.left
+{
+    float: left;
+    margin: 0 2em 2em 0;
+}
+
+.image.centered
+{
+    display: block;
+    margin: 0 0 2em 0;
+}
+
+.image.centered img
+{
+    margin: 0 auto;
+    width: auto;
+}
+
+/* Lists */
+
+ul.default
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.default li
+{
+    padding: 0.60em 0em;
+    border-top: 1px solid;
+    border-color: rgba(255,255,255,.1);
+}
+
+ul.default li:first-child
+{
+    padding-top: 0;
+    border-top: none;
+}
+
+ul.default a
+{
+    text-decoration: none;
+    color: rgba(255,255,255,.5);
+}
+
+ul.default a:hover
+{
+    text-decoration: underline;
+}
+
+ul.style {
+}
+
+ul.style li {
+    margin: 0;
+    padding: 1em;
+    border-bottom: 1px solid #ECECEC;
+}
+
+ul.style img {
+    float: left;
+    margin-right: 20px;
+}
+
+ul.style p {
+}
+
+ul.style .title {
+    padding: 1em 0 0 0;
+    font-size: 1em;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 5px;
+    line-height: 1.25;
+}
+
+ul.style .location {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+ul.style .first {
+    padding-top: 0px;
+    border-top: none;
+}
+
+ul.style .calendar {
+    width: 80px;
+    height: 87px;
+    background: url('../images/icon-calendar.png');
+    float: left;
+    margin-right: 20px;
+    padding: 35px 5px 5px 5px;
+    font-family: 'Sportscenter';
+    text-align: center;
+    color: #000
+}
+
+ul.style .calendar .month {
+    font-size: 10px;
+    line-height: 0.5;
+    margin-bottom: 5px;
+}
+
+ul.style .calendar .date {
+    font-size: 35px;
+}
+
+ul.icons {
+    cursor: default;
+}
+
+ul.icons li {
+    display: inline-block;
+}
+
+ul.icons a {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    font-size: 2em;
+    text-align: center;
+    border: 0;
+}
+ul.icons li a.icon {
+    text-decoration: none;
+    -moz-transition: color 0.35s ease-in-out;
+    -webkit-transition: color 0.35s ease-in-out;
+    -ms-transition: color 0.35s ease-in-out;
+    transition: color 0.35s ease-in-out;
+}
+
+ul.icons li a.icon:before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 1.25em;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ul.icons li a.icon:hover {
+    color: #FFF;
+}
+
+ul.icons li a.icon > .label {
+    display: none;
+}
+
+
+/* Buttons */
+
+.button
+{
+    position: relative;
+    display: inline-block;
+    margin-top: 2em;
+    padding: 0.90em 1.5em;
+    background: #e95d3c;
+    border-radius: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    color: #FFF;
+    -moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+    -webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+    -o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+    -ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+    transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+    cursor: pointer;
+}
+
+.button:hover
+{
+    background: #de3d27;
+    color: #FFF !important;
+}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+#header
+{
+    position: relative;
+    background: #2a2f27 url(../images/home-banner.jpg) no-repeat;
+    background-size: cover;
+}
+
+#logo
+{
+    font-family: 'Sportscenter',Sans-Serif;
+    line-height: 1;
+}
+
+#nav
+{
+}
+
+#nav ul
+{
+    margin: 0;
+}
+
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+#banner
+{
+    position: relative;
+    background: #333;
+    color: #fff;
+}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+#main {
+    position: relative;
+    background: #f2f2f2;
+    min-height: 500px;
+}
+#mainContentWrapper {
+    min-height: 500px;
+    background: #f2f2f2;
+}
+
+/*********************************************************************************/
+/* Featured                                                                      */
+/*********************************************************************************/
+
+#featured
+{
+    position: relative;
+    background: #f2f2f2;
+}
+
+#featured h2
+{
+    display: block;
+    margin-bottom: 2em;
+    font-size: 1.4em;
+}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+#footer
+{
+    position: relative;
+    background: #1d1d1d;
+}
+
+#footer h2
+{
+    display: block;
+    color: #FFF;
+}
+
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+
+#copyright
+{
+    position: relative;
+    padding: 3em 0em;
+    letter-spacing: 1px;
+    text-align: center;
+    color: rgba(255,255,255,.2);
+}
+
+#copyright .container
+{
+}
+
+#copyright a
+{
+    text-decoration: none;
+    color: rgba(255,255,255,.3);
+}
+
+
+/*********************************************************************************/
+/* NCSL Misc                                                                     */
+/*********************************************************************************/
+
+#btnloginSubmit {
+    padding: 3px 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#signWaiverBox,
+#waiverMinorName {
+    width: 250px;
+}
+
+#signWaiverBtn {
+    font-size: 1.25em;
+    padding: 5px 10px;
+    border-color: #666;
+    cursor: pointer;
+}
+
+/*********************************************************************************/
+/* NCSL Schedule                                                                 */
+/*********************************************************************************/
+
+#scheduleContent-main {
+    position: relative;
+}
+
+#scheduleContent-info {
+    position: relative;
+    display: none;
+}
+#scheduleContent-info h2 {
+    margin-top: 50px;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+#scheduleContent-info .gameInfo {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.scheduleBack,
+.standingsBack {
+    color: #000;
+    text-decoration: underline;
+}
+.scheduleBack:hover,
+.standingsBack:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btnScheduleFilterToggle {
+    float: right;
+    clear: both;
+}
+
+#scheduleStatus {
+    font-style: italic;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+#scheduleTable{
+    display: table;
+    width: 100%;
+    margin-top: 50px;
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(51,51,51,1);
+    -moz-box-shadow: 3px 3px 10px 0px rgba(51,51,51,1);
+    box-shadow: 3px 3px 10px 0px rgba(51,51,51,1);
+}
+
+.scheduleTableHeading {
+    display: table-header-group;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#scheduleTableBody {
+    display: table-row-group;
+}
+
+.scheduleTableRow {
+    display: table-row; 
+}
+.scheduleTableRow:hover {
+    background-color: #444;
+    color: #EEE;
+    cursor: pointer;
+}
+
+.scheduleTableCell, .scheduleTableHead {
+    display: table-cell;
+    padding: 3px 10px;
+    border-bottom: 1px solid #CCC;
+}
+
+.scheduleTableHead:hover {
+    cursor: pointer;
+    color: #000;
+}
+
+#schedule-th-who {
+    width: 60%;
+}
+#schedule-th-when {
+    width: 25%;
+}
+#schedule-th-where {
+    width: 15%;
+}
+
+#scheduleFilter {
+    background-color: #E9E9E9;
+    width: 100%;
+    height: 225px;
+    margin-top: 20px;
+    padding: 7px 10px;
+    border-radius: 3px;
+    border: 1px solid #999;
+    overflow: hidden;
+}
+
+.scheduleFilterHeader {
+    border-bottom: 1px dashed #CCC;
+    padding-bottom: 10px;
+}
+.scheduleFilterHeader span {
+    font-size: 1.2em;
+}
+
+#scheduleFilter p:first-of-type {
+    margin-top: 25px;
+}
+
+#scheduleMap {
+    border: 1px solid #333;
+    width: 90%;
+    height: 375px;
+    margin: 10px auto;
+}
+
+#standingsRow,
+#teamPageWrapper {
+    position: relative;
+    display: none;
+}
+
+#standingsRow h2 {
+    font-size: 1.5em;
+}
+
+#standingsByline {
+    font-style: italic;
+}
+
+.standingsTeamList li {
+    padding: 5px;
+    border-bottom: 1px dashed #CCC;
+}
+.standingsTeamList li:hover {
+    background-color: #ECECEC;
+    font-weight: bold;
+    cursor: pointer;
+    border-left: 1px dashed #CCC;
+    text-decoration: underline;
+}
+
+.standingsTeamList li span {
+    float: right;
+    font-size: 1.2em;
+}
+
+.standingsBack {
+    display: none;
+}
+
+#teamPageContent,
+#teamPageInfo {
+    padding-top: 0;
+}
+
+#teamHistoryWrap {
+    margin-top: 30px;
+}
+
+#sidebarTeamName {
+    font-style: italic;
+    margin-top: 0 !important;
+    font-size: 1.1em;
+}
+
+#sidebar img {
+    max-width: 100%;
+}
+
+#sidebar .noImg {
+    height: 100px;
+    width: 100px;
+    border: 1px dashed #222;
+    font-size: 0.8em;
+    margin-bottom: 1em;
+    padding: 20px;
+}
+
+#teamPageImageWrap {
+    width: 325px;
+    height: 200px;
+}
+
+#teamPageSlogan {
+    font-size: 0.9em;
+}
+
+.ghResult {
+    float: right;
+}
+
+
+
+#infoFilter {
+    background-color: #E9E9E9;
+    min-width: 250px;
+    max-width: 385px;
+    padding: 7px 10px;
+    border-radius: 3px;
+    border: 1px solid #999;
+    font-size: 1.2em;
+}
+
+#infoFilterGuide {
+    margin-bottom: 0 !important;
+}
+
+#infoFilterGuide li {
+    display: inline-block;
+    margin: 5px 20px;
+    cursor: pointer;
+}
+#infoFilterGuide li:hover {
+    text-decoration: underline;
+}
+
+#infoFilterGuide li.selected {
+    font-weight: bold;
+    cursor: default;
+}
+#infoFilterGuide li.selected:hover {
+    text-decoration: none;
+}
+
+.infoContent {
+    display: none;
+    padding-top: 20px !important;;
+}
+
+#main.Info ul {
+    list-style: disc;
+    margin-left: 15px;
+}
+
+#waiverText {
+    text-align: center;
+    font-style: italic;
+    color: #000;
+    font-size: 1.25em;
+}
+
+#waiverContent {
+    padding-top: 0;
+    
+}
+#waiverContent p {
+    text-indent: 50px;
+    color: #000;
+    margin-bottom: 1.5em;
+}
+
+.waiverList {
+    list-style: none;
+    margin-left: 50px;
+    color: #000;
+}
+.waiverList li {
+    padding-left: 25px;
+}
+
+#waiverMinorNameWrap {
+    display: none;
+}
+
+#waiverStatus {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#logoutBtn,
+#btnUpdateAccount {
+    padding: 7px 14px;
+}
+#logoutBtn i,
+#btnUpdateAccount i {
+    font-style: normal;
+    font-size: 2em;
+}
+#logoutBtn span,
+#btnUpdateAccount span {
+    position: relative;
+    top: -4px;
+    margin-left: 5px;
+}
+
+
+
+.loader {
+  border: 5px solid #f3f3f3;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  border-top: 5px solid #555;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.hasError {
+    border: 1px solid #FF0000;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
