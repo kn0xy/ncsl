@@ -31,7 +31,13 @@ function createTempDb($dbName) {
             if(!$exeq) return false;
             $templine = '';
         }
-    }    
+    }
+    
+    // Make a record of the temp db
+    mysqli_query($cdbc, "USE ncsl");
+    mysqli_query($cdbc, "INSERT INTO dbs (name) VALUES ('$dbName')");
+    
+    // Close the connection
     mysqli_close($cdbc);
     return true;
 }
