@@ -98,10 +98,6 @@ header
     margin-bottom: 1em;
 }
 
-header h2
-{
-}
-
 header .byline
 {
     display: block;
@@ -223,9 +219,6 @@ ul.default a:hover
     text-decoration: underline;
 }
 
-ul.style {
-}
-
 ul.style li {
     margin: 0;
     padding: 1em;
@@ -235,9 +228,6 @@ ul.style li {
 ul.style img {
     float: left;
     margin-right: 20px;
-}
-
-ul.style p {
 }
 
 ul.style .title {
@@ -372,10 +362,6 @@ ul.icons li a.icon > .label {
     line-height: 1;
 }
 
-#nav
-{
-}
-
 #nav ul
 {
     margin: 0;
@@ -400,6 +386,8 @@ ul.icons li a.icon > .label {
     position: relative;
     background: #f2f2f2;
     min-height: 500px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 #mainContentWrapper {
     min-height: 500px;
@@ -450,10 +438,6 @@ ul.icons li a.icon > .label {
     letter-spacing: 1px;
     text-align: center;
     color: rgba(255,255,255,.2);
-}
-
-#copyright .container
-{
 }
 
 #copyright a
